@@ -1,3 +1,4 @@
+
 import streamlit as st
 
 st.set_page_config(
@@ -5,29 +6,21 @@ st.set_page_config(
     layout="centered"
 )
 
+# CSS para esconder cabeçalho, menu e rodapé do Streamlit
 st.markdown("""
 <style>
     /* Remove cabeçalho */
     header[data-testid="stHeader"] {
-        display: none !important;
+        display: none;
     }
-    /* Remove menu hambúrguer */
+    /* Remove menu hamburger no canto superior direito */
     #MainMenu {
-        visibility: hidden !important;
+        visibility: hidden;
     }
-    /* Remove rodapé */
+    /* Remove rodapé do Streamlit */
     footer {
-        visibility: hidden !important;
+        visibility: hidden;
     }
-    /* Remove link <a> no topo (XPath /html/body/div/div[1]/div/div/a) */
-    body > div > div:nth-child(1) > div > div > a {
-        display: none !important;
-    }
-    /* Remove div no topo (XPath /html/body/div/div[1]/div/div/div) */
-    body > div > div:nth-child(1) > div > div > div {
-        display: none !important;
-    }
-
     /* Seu CSS customizado */
     @font-face {
         font-weight: normal;
