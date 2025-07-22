@@ -1,189 +1,182 @@
 import streamlit as st
 
-
 st.set_page_config(
     page_title="Ranke 360°",
     layout="centered"
 )
 
-
+# CSS para esconder cabeçalho, menu e rodapé do Streamlit
 st.markdown("""
 <style>
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    /* Remove cabeçalho */
+    header[data-testid="stHeader"] {
+        display: none;
+    }
+    /* Remove menu hamburger no canto superior direito */
+    #MainMenu {
+        visibility: hidden;
+    }
+    /* Remove rodapé do Streamlit */
+    footer {
+        visibility: hidden;
+    }
+    /* Seu CSS customizado */
+    @font-face {
+        font-weight: normal;
+        font-style: normal;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+    body {
+        background-color: #0D47A1;
+        font-family: 'iBrand', 'Montserrat', sans-serif;
+        color: #ffffff !important;
+    }
 
-body {
-    background-color: #0D47A1;
-    font-family: 'iBrand', 'Montserrat', sans-serif;
-    color: #ffffff !important;
-}
+    .container {
+        max-width: 480px;
+        margin: auto;
+        padding: 30px 40px;
+        background-color: #0D47A1;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(13, 71, 161, 0.15);
+    }
 
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 140px;
+        height: 140px;
+        margin-bottom: 25px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
-.container {
-    max-width: 480px;
-    margin: auto;
-    padding: 30px 40px;
-    background-color: #0D47A1;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.15);
-}
+    h1, h2.subtitle {
+        color: #ffffff !important;
+    }
 
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
 
-.logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 140px;
-    height: 140px;
-    margin-bottom: 25px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+    h2.subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
 
+    p.description {
+        text-align: center;
+        color: #ffffff !important;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
 
-h1, h2.subtitle {
-    color: #ffffff !important;
-}
+    a.link-button {
+        display: block;
+        text-align: center;
+        background-color: #0D47A1;
+        color: white !important;
+        padding: 14px 0;
+        margin: 12px 0;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 3px 8px rgba(13,71,161,0.25);
+    }
+    a.link-button:hover {
+        background-color: #1565C0;
+        box-shadow: 0 5px 15px rgba(21,101,192,0.5);
+        color: #ffffff !important;
+    }
 
+    .footer {
+        margin-top: 50px;
+        font-size: 0.85rem;
+        color: #ffffff !important;
+        text-align: center;
+        line-height: 1.4;
+    }
+    .footer a {
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
 
-h1 {
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
+    .tabs-container {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    .tab-content-style {
+        font-family: 'iBrand', 'Montserrat', sans-serif !important;
+        color: #ffffff !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
 
-h2.subtitle {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
+    /* Remove barra animada laranja da aba selecionada */
+    .stTabs [data-baseweb="tab-highlight"] {
+        background-color: transparent !important;
+    }
 
+    /* Aba selecionada */
+    .stTabs [role="tablist"] button[aria-selected="true"] {
+        border-bottom: 3px solid #ffffff !important;
+        color: #ffffff !important;
+        font-weight: 700;
+    }
 
-p.description {
-    text-align: center;
-    color: #ffffff !important;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 40px;
-}
+    /* Abas não selecionadas */
+    .stTabs [role="tablist"] button {
+        border-bottom: 3px solid transparent;
+        color: #ffffff !important;
+        font-weight: 500;
+        transition: border-color 0.3s ease;
+        margin-right: 20px;
+        font-size: 1rem !important;
+        white-space: nowrap !important;         /* força texto em uma única linha */
+        overflow: visible !important;
+        text-overflow: ellipsis;
+        min-width: 90px;
+    }
+    .stTabs [role="tablist"] button:last-child {
+        margin-right: 0;
+    }
 
+    /* Hover nas abas */
+    .stTabs [role="tablist"] button:hover {
+        border-bottom: 3px solid #bbbbbb;
+        color: #bbbbbb !important;
+        cursor: pointer;
+    }
 
-a.link-button {
-    display: block;
-    text-align: center;
-    background-color: #0D47A1;
-    color: white !important;
-    padding: 14px 0;
-    margin: 12px 0;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 3px 8px rgba(13,71,161,0.25);
-}
-a.link-button:hover {
-    background-color: #1565C0;
-    box-shadow: 0 5px 15px rgba(21,101,192,0.5);
-    color: #ffffff !important;
-}
-
-
-.footer {
-    margin-top: 50px;
-    font-size: 0.85rem;
-    color: #ffffff !important;
-    text-align: center;
-    line-height: 1.4;
-}
-.footer a {
-    color: #ffffff !important;
-    text-decoration: none;
-}
-.footer a:hover {
-    text-decoration: underline;
-}
-
-
-.tabs-container {
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.tab-content-style {
-    font-family: 'iBrand', 'Montserrat', sans-serif !important;
-    color: #ffffff !important;
-    font-size: 1rem !important;
-    text-align: center !important;
-}
-
-
-/* Remove barra animada laranja da aba selecionada */
-.stTabs [data-baseweb="tab-highlight"] {
-    background-color: transparent !important;
-}
-
-
-/* Aba selecionada */
-.stTabs [role="tablist"] button[aria-selected="true"] {
-    border-bottom: 3px solid #ffffff !important;
-    color: #ffffff !important;
-    font-weight: 700;
-}
-
-
-/* Abas não selecionadas */
-.stTabs [role="tablist"] button {
-    border-bottom: 3px solid transparent;
-    color: #ffffff !important;
-    font-weight: 500;
-    transition: border-color 0.3s ease;
-    margin-right: 20px;
-    font-size: 1rem !important;
-    white-space: nowrap !important;        /* força texto em uma única linha */
-    overflow: visible !important;
-    text-overflow: ellipsis;
-    min-width: 90px;
-}
-.stTabs [role="tablist"] button:last-child {
-    margin-right: 0;
-}
-
-
-/* Hover nas abas */
-.stTabs [role="tablist"] button:hover {
-    border-bottom: 3px solid #bbbbbb;
-    color: #bbbbbb !important;
-    cursor: pointer;
-}
-
-
-/* Fonte e estilo texto título das abas */
-.stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
-    font-size: 1rem !important;
-    margin: 0;
-    white-space: nowrap !important;
-    overflow: visible !important;
-    text-overflow: ellipsis;
-}
+    /* Fonte e estilo texto título das abas */
+    .stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
+        font-size: 1rem !important;
+        margin: 0;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: ellipsis;
+    }
 </style>
 """, unsafe_allow_html=True)
-
 
 # Logo centralizada no topo
 st.markdown("""
 <img src="https://lh3.googleusercontent.com/p/AF1QipNWXxW-WReAzeTIx8cX2HsuXkC_PII7f-Ff6KTa=w408-h408-k-no" alt="Ranke 360 Logo" class="logo" />
 """, unsafe_allow_html=True)
-
-
 
 # Apresentação resumida
 st.markdown("""
@@ -192,14 +185,12 @@ Visibilidade Estratégica para Negócios
 </p>
 """, unsafe_allow_html=True)
 
-
 # Apresentação resumida
 st.markdown("""
 <p class="description">
 DESTAQUE | POSICIONAMENTO | CLIENTES
 </p>
 """, unsafe_allow_html=True)
-
 
 # Links com botões estilizados
 links = {
@@ -210,20 +201,17 @@ links = {
     "Blog Ranke 360°": "https://ranke360.streamlit.app"
 }
 
-
 for nome, url in links.items():
     st.markdown(f'<a class="link-button" href="{url}" target="_blank" rel="noopener noreferrer">{nome}</a>', unsafe_allow_html=True)
 
-
 # Container das abas centralizado e limitado
 st.markdown('<div class="tabs-container">', unsafe_allow_html=True)
-
 
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "VÍDEO IMERSIVO",
     "IMAGEM 360°",
     "TOUR VIRTUAL",
-    "MAPA",
+    "MAP",
     "360° EXCLUSIVO",
     "SOBRE"
 ])
@@ -283,5 +271,3 @@ with tab6:
     <div class="tab-content-style">
     </div>
     """, unsafe_allow_html=True)
-
-
