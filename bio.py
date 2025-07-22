@@ -212,7 +212,7 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "VÍDEO IMERSIVO",
     "IMAGEM 360°",
     "TOUR VIRTUAL",
-    "MAP",
+    "MAPA",
     "360° EXCLUSIVO",
     "SOBRE"
 ])
