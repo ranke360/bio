@@ -189,8 +189,8 @@ with tab_img360:
     st.markdown("<h3>Quadra de Basquete | Brejo Santo-CE</h3>", unsafe_allow_html=True)
     embed_centered_iframe("https://www.google.com/maps/embed?pb=!4v1753150711289!6m8!1m7!1sCAoSHENJQUJJaERnaG1mQmpPOEpHZk9LYnNWUmlQaXM.!2m2!1d-7.484971799999999!2d-38.9860056!3f195.21!4f-0.5600000000000023!5f0.4000000000000002")
 
-    st.markdown("<h3>Fonte Praça Dionísio Rocha de Lucena | Brejo Santo-CE</h3>", unsafe_allow_html=True)
-    embed_centered_iframe("https://www.google.com/maps/embed?pb=!4v1753231354894!6m8!1m7!1sCAoSHENJQUJJaEFRZkNJQVhsR2oxSlBjNUFzLVFxWVo.!2m2!1d-7.492762974332387!2d-38.98537099202362!3f182.59843236550242!4f-7.966336407339398!5f0.4000000000000002")
+    st.markdown("<h3>CineTeatro Municipal Professor Júlio Macedo Costa | Brejo Santo-CE</h3>", unsafe_allow_html=True)
+    embed_centered_iframe("https://www.google.com/maps/embed?pb=!4v1753310567315!6m8!1m7!1sCAoSHENJQUJJaEJpelU0dGRScTVzY3hGQXVwaDNCTkc.!2m2!1d-7.491297399999999!2d-38.9761639!3f357.427296679104!4f-4.339601456811053!5f0.4000000000000002")
 
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -208,9 +208,43 @@ with tab_tour:
 with tab_video:
     st.markdown('<div class="tab-content-style">', unsafe_allow_html=True)
 
-    st.markdown("<h3>Skate Radical no Sol Escaldante: Vídeo Imersivo 360° com Ítalo Gomes | Ranke 360</h3>", unsafe_allow_html=True)
+    # Vídeo 1: Pitinininha Kids
+    st.markdown("<h3>Pitinininha Kids | A Melhor Loja de Roupas Infantis de Brejo Santo-CE</h3>", unsafe_allow_html=True)
+    video_html_1 = """
+    <div style="display: flex; justify-content: center;">
+      <iframe 
+        width="480" 
+        height="315" 
+        src="https://www.youtube.com/embed/Ur5kwNnWq8A?si=Ci_G4SkarslpgfsW" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    """
+    components.html(video_html_1, height=350)
 
-    video_html = """
+    # Vídeo 2: Next Level
+    st.markdown("<h3>Next Level | Cajazeiras-PB | A Academia Mais Moderna de Cajazeiras-PB</h3>", unsafe_allow_html=True)
+    video_html_2 = """
+    <div style="display: flex; justify-content: center;">
+      <iframe 
+        width="480" 
+        height="315" 
+        src="https://www.youtube.com/embed/lwStG-fQeok?si=OF8M5ZwyK8gsjplq" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    """
+    components.html(video_html_2, height=350)
+
+    # Vídeo 3: Skate Radical
+    st.markdown("<h3>Skate Radical no Sol Escaldante: Vídeo Imersivo 360° com Ítalo Gomes | Ranke 360</h3>", unsafe_allow_html=True)
+    video_html_3 = """
     <div style="display: flex; justify-content: center;">
       <iframe 
         width="480" 
@@ -223,7 +257,7 @@ with tab_video:
       </iframe>
     </div>
     """
-    components.html(video_html, height=350)
+    components.html(video_html_3, height=350)
 
     st.markdown('</div>', unsafe_allow_html=True)
 
