@@ -230,20 +230,34 @@ with tab1:
 with tab2:
     st.markdown("""
     <div class="tab-content-style">
-    <h3>Quadra de Basquete | Brejo Santo-CE</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1753150711289!6m8!1m7!1sCAoSHENJQUJJaERnaG1mQmpPOEpHZk9LYnNWUmlQaXM.!2m2!1d-7.484971799999999!2d-38.9860056!3f195.21!4f-0.5600000000000023!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-    <h3>Ginásio Poliesportivo Welingtão | Brejo Santo-CE</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1753150938298!6m8!1m7!1sCAoSHENJQUJJaEQwY09MVkRONG5ic1VnamQtTkw0SV8.!2m2!1d-7.489376802708099!2d-38.9901219288986!3f190.74911673396883!4f3.1483665025552057!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <h3>Pitinininha Kids | Roupa infantil | Brejo Santo-CE</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!4v1753151196062!6m8!1m7!1sCAoSHENJQUJJaEI4OUxua0JvT1VoaklzY09CaWVUdEg.!2m2!1d-7.493140408761639!2d-38.98694109336261!3f297.8543782167756!4f-10.166367931658101!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <h3>Next Level | Academia | Brejo Santo-CE</h3>
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1753151300722!6m8!1m7!1sCAoSHENJQUJJaENabnYta1NIYnk3U0VTZXg2cVZFSUQ.!2m2!1d-7.486728599999999!2d-38.9976357!3f14.212028543852037!4f-10.245711121253734!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
     <h3>Next Level | Academia | Cajazeiras - PB</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!4v1753180786706!6m8!1m7!1sCAoSHENJQUJJaEFxQUtEOWxMaEdRekpiYk5SbGEzeGc.!2m2!1d-6.887891776224389!2d-38.55972383357095!3f1.520990456891578!4f-30.982226239046547!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+    <h3>Next Level | Academia | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753151300722!6m8!1m7!1sCAoSHENJQUJJaENabnYta1NIYnk3U0VTZXg2cVZFSUQ.!2m2!1d-7.486728599999999!2d-38.9976357!3f14.212028543852037!4f-10.245711121253734!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     
+    <h3>Ginásio Poliesportivo Welingtão | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753150938298!6m8!1m7!1sCAoSHENJQUJJaEQwY09MVkRONG5ic1VnamQtTkw0SV8.!2m2!1d-7.489376802708099!2d-38.9901219288986!3f190.74911673396883!4f3.1483665025552057!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h3>Bar Caldeira do Inferno | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753231196225!6m8!1m7!1sCAoSHENJQUJJaEQxcnI1cGMyTWlqQ3Z5NUxiV2tpZlY.!2m2!1d-7.492859299999999!2d-38.98546!3f157.1298482595132!4f-34.00956372051077!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h3>Pista Pública de Skate | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753231252386!6m8!1m7!1sCAoSHENJQUJJaEJodGhOaDNiWTg4MDIwYWVFQzdqXzg.!2m2!1d-7.48501101224435!2d-38.98611708745776!3f8.388327367476812!4f-13.107200825728412!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h3>Quadra de Basquete | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753150711289!6m8!1m7!1sCAoSHENJQUJJaERnaG1mQmpPOEpHZk9LYnNWUmlQaXM.!2m2!1d-7.484971799999999!2d-38.9860056!3f195.21!4f-0.5600000000000023!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+    <h3>Fonte Praça Dionísio Rocha de Lucena | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753231354894!6m8!1m7!1sCAoSHENJQUJJaEFRZkNJQVhsR2oxSlBjNUFzLVFxWVo.!2m2!1d-7.492762974332387!2d-38.98537099202362!3f182.59843236550242!4f-7.966336407339398!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h3>Museu Municipal Historiadora Marineusa Santana Basílio Leite | Brejo Santo-CE</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1753231442306!6m8!1m7!1sCAoSHENJQUJJaEFMV2tRTUxYT1VIdEdnMmNwbzltYzk.!2m2!1d-7.488856276863652!2d-38.98997716077863!3f5.084682959484297!4f1.5985458206393588!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
     </div>
     """, unsafe_allow_html=True)
 
