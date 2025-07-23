@@ -1,4 +1,3 @@
-
 import streamlit as st
 
 st.set_page_config(
@@ -147,7 +146,7 @@ st.markdown("""
         transition: border-color 0.3s ease;
         margin-right: 20px;
         font-size: 1rem !important;
-        white-space: nowrap !important;         /* força texto em uma única linha */
+        white-space: nowrap !important;
         overflow: visible !important;
         text-overflow: ellipsis;
         min-width: 90px;
@@ -186,7 +185,6 @@ Visibilidade Estratégica para Negócios
 </p>
 """, unsafe_allow_html=True)
 
-# Apresentação resumida
 st.markdown("""
 <p class="description">
 DESTAQUE | POSICIONAMENTO | CLIENTES
@@ -208,28 +206,18 @@ for nome, url in links.items():
 # Container das abas centralizado e limitado
 st.markdown('<div class="tabs-container">', unsafe_allow_html=True)
 
-tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-    "VÍDEO IMERSIVO",
+tab_img360, tab_tour, tab_video, tab_mapa, tab_exclusivo = st.tabs([
     "IMAGEM 360°",
     "TOUR VIRTUAL",
+    "VÍDEO IMERSIVO",
     "MAPA",
-    "360° EXCLUSIVO",
-    "SOBRE"
+    "360° EXCLUSIVO"
 ])
 
-with tab1:
+with tab_img360:
     st.markdown("""
     <div class="tab-content-style">
-    <h3 style="font-size: 1.1rem;">
-        Skate Radical no Sol Escaldante: Vídeo Imersivo 360° com Ítalo Gomes | Ranke 360
-    </h3>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/_wlmH5ync08?si=3Wo3AZumCWlpblW_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    """, unsafe_allow_html=True)
-
-with tab2:
-    st.markdown("""
-    <div class="tab-content-style">
+                
 
     <h3>Pitinininha Kids | Roupa infantil | Brejo Santo-CE</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!4v1753151196062!6m8!1m7!1sCAoSHENJQUJJaEI4OUxua0JvT1VoaklzY09CaWVUdEg.!2m2!1d-7.493140408761639!2d-38.98694109336261!3f297.8543782167756!4f-10.166367931658101!5f0.7820865974627469" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -257,11 +245,12 @@ with tab2:
 
     <h3>Museu Municipal Historiadora Marineusa Santana Basílio Leite | Brejo Santo-CE</h3>
     <iframe src="https://www.google.com/maps/embed?pb=!4v1753231442306!6m8!1m7!1sCAoSHENJQUJJaEFMV2tRTUxYT1VIdEdnMmNwbzltYzk.!2m2!1d-7.488856276863652!2d-38.98997716077863!3f5.084682959484297!4f1.5985458206393588!5f0.4000000000000002" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
     
     </div>
     """, unsafe_allow_html=True)
 
-with tab3:
+with tab_tour:
     st.markdown("""
     <div class="tab-content-style">
     <h3>BFX Consultoria | Contabilidade | Brejo Santo-CE</h3>
@@ -269,20 +258,24 @@ with tab3:
     </div>
     """, unsafe_allow_html=True)
 
-with tab4:
+with tab_video:
     st.markdown("""
     <div class="tab-content-style">
+    <h3>Skate Radical no Sol Escaldante: Vídeo Imersivo 360° com Ítalo Gomes | Ranke 360</h3>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/_wlmH5ync08?si=3Wo3AZumCWlpblW_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     """, unsafe_allow_html=True)
 
-with tab5:
+with tab_mapa:
     st.markdown("""
     <div class="tab-content-style">
+    <!-- Conteúdo da aba MAPA - insira seu conteúdo aqui -->
     </div>
     """, unsafe_allow_html=True)
 
-with tab6:
+with tab_exclusivo:
     st.markdown("""
     <div class="tab-content-style">
+    <!-- Conteúdo da aba 360° EXCLUSIVO - insira seu conteúdo aqui -->
     </div>
     """, unsafe_allow_html=True)
