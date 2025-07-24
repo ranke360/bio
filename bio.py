@@ -259,7 +259,25 @@ with tab_video:
     """
     components.html(video_html_3, height=350)
 
+    # Vídeo 4: Circuito Ecosport em Brejo Santo-CE
+    st.markdown("<h3>Circuito Ecosport em Brejo Santo-CE: Motocross Insano | Ranke 360°</h3>", unsafe_allow_html=True)
+    video_html_4 = """
+    <div style="display: flex; justify-content: center;">
+      <iframe 
+        width="480" 
+        height="315" 
+        src="https://www.youtube.com/embed/lKrutwPQ3GM" 
+        title="YouTube Shorts video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+    """
+    components.html(video_html_4, height=350)
+
     st.markdown('</div>', unsafe_allow_html=True)
+
 
 
 
